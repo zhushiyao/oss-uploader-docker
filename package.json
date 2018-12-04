@@ -1,0 +1,29 @@
+{
+  "name": "oss-uploader-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ossup": "bin/up.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "DEBUG=ali-oss node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhushiyao/oss-uploader-docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhushiyao/oss-uploader-docker/issues"
+  },
+  "homepage": "https://github.com/zhushiyao/oss-uploader-docker#readme",
+  "dependencies": {
+    "ali-oss": "^6.0.1",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.1"
+  }
+}
