@@ -3,6 +3,7 @@
 var program = require('commander')
 var packInfo = require('../package.json')
 const Client = require('../lib/ossClient')
+
 program.version(packInfo.version)
 
 program
@@ -12,7 +13,14 @@ program
   .option('-t, --tag [tag]', '上传目录添加tag')
   .option('-l, --local-file-path [localFilePath]', '指定上传的文件本地路径', 'build')
   .option('-u, --upload-file-path [uploadFilePath]', '指定上传到服务器的文件路径', 'build')
-  .action(Client.uploadFiles)
+  .action(function(bucket, option) {
+    const client = new Client(bucket)
+    client.on('error', function(error) {
+      console.error(error)
+      process.exit(1)
+    })
+    client.uploadFiles(bucket, option)
+  })
 
 program
   .command('fetch <bucket>')
