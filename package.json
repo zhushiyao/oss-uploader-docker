@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "ossup": "bin/up.js"
+    "daily": "bin/daily.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +24,7 @@
   "dependencies": {
     "ali-oss": "^6.0.1",
     "commander": "^2.19.0",
-    "inquirer": "^6.2.1"
+    "inquirer": "^6.2.1",
+    "request": "^2.88.0"
   }
 }
