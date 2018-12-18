@@ -14,7 +14,7 @@ program
   .alias('up')
   .description('上传文件到oss')
   .option('-r, --region [region]', 'oss region', 'oss-cn-shanghai')
-  .option('-t, --tag [tag]', '上传目录添加tag')
+  .option('-t, --tag [tag]', '上传目录添加tag', '')
   .option('-l, --local-file-path [localFilePath]', '指定上传的文件本地路径', 'build')
   .option('-u, --upload-file-path [uploadFilePath]', '指定上传到服务器的文件路径', '')
   .option('-i, --website-index [websiteIndex]', '指定托管页面index地址', 'index.html')
