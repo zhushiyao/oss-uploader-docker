@@ -1,7 +1,8 @@
 const Client = require('./lib/ossClient')
 // const bucket = 'web-template-test'
 // const bucket = 'offlineteam-crm'
-const bucket = 'react-template-web'
+const bucket = 'einheriar-admin'
+// const bucket = 'react-template-web'
 // const bucket = 'offlineteam-crm-oss'
 // const bucket = 'zsy-test'
 
@@ -22,13 +23,13 @@ const bucket = 'react-template-web'
     // })
 
     // ======  查询文件
-    // let objects = await client.fetchFiles(bucket)
-    // console.log(objects)
+    let objects = await client.fetchFiles(bucket)
+    console.log((objects || []).map(o => o.name))
 
     // console.log(objects.map(f => f.name))
 
     // ======   清除bucket
-    await client.clearFile(bucket, { all: true })
+    // await client.clearFile(bucket, { all: true })
     // await client.deleteBucket(bucket, { all: true })
 
     // ====== 查询权限
