@@ -28,7 +28,7 @@ const bucket = 'react-template-web'
     // console.log(objects.map(f => f.name))
 
     // ======   清除bucket
-    // await client.clearFile(bucket, { all: true })
+    await client.clearFile(bucket, { all: true })
     // await client.deleteBucket(bucket, { all: true })
 
     // ====== 查询权限
