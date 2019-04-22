@@ -16,10 +16,10 @@ const bucket = 'react-template-web'
     let client = new Client()
 
     // ======    查询bucket
-    client.fetchBucket().then(res => {
-      // console.log(res)
-      res.buckets.map(b => console.log(b.name))
-    })
+    // client.fetchBucket().then(res => {
+    //   // console.log(res)
+    //   res.buckets.map(b => console.log(b.name))
+    // })
 
     // ======  查询文件
     // let objects = await client.fetchFiles(bucket)
